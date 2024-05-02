@@ -1,5 +1,5 @@
 '''
-Uses a tkinter window to generate randomly chosed pairs of 
+Uses a tkinter window to generate randomly chosen pairs of 
 letters and numbers. This is done without replacement
 '''
 
