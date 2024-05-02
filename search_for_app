@@ -1,0 +1,26 @@
+# This script prompts the user for the title of an app and then searches the 
+# device to see if the app is installed
+#
+# This script was originally designed to be executed remotely on student devices to 
+# periodically scan for any unapproved or dangerous apps. If you wish to send it remotely,
+# uncomment the "APPNAME = "VLC" line and replace the string with whichever app you wish
+# to search for. Then comment out the echo and read lines below it.
+#
+# By default, this script is designed to email the results of the scan to the users listed below.
+# If extra users are to be added, simply add their emails to the end of the "mail" command, 
+# separated by spaces if there are multiple addresses.
+
+#/bin/bash
+USER=`users`
+# APPNAME = "VLC"
+echo Enter the name of the app you want to search for: 
+read APPNAME
+
+RESULT=`mdfind "kMDItemKind == 'Application'" | grep $APPNAME`
+echo "$RESULT"
+if [ "$RESULT" = "" ]; then
+    echo "$APPNAME not found on $USER s device"
+else
+    echo "$APPNAME FOUND ON $USER s DEVICE"
+	echo "$APPNAME found on $USER s device at location $RESULT" | mail -s "$APPNAME found on $USER s device." chrisdellinger@averyschools.net 
+fi
