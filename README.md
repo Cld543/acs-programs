@@ -14,7 +14,7 @@ and the sctipt will return the colon-separated mac address
 This function was used when formatting a large number of exported
 mac addresses that did not include the colon separators.
 
-Example: A1B2C3D4E5F6G7H8 Formats to A1:B2:C3:D4:E5:F6:G7:H8
+Example: A1B2C3D4E5F6 Formats to A1:B2:C3:D4:E5:F6
 
 ## bintodec.py
 A simple script that converts a binary number into its decimal form
