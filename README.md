@@ -37,7 +37,7 @@ include barcode scanner support, manual data entry support, an automatic
 backup feature, and a custom file name option.
 
 ## dice.py
-A fun program used to simulate dice rolls and optionally display hte results as ASCII characters.
+A fun program used to simulate dice rolls and optionally display the results as ASCII characters.
 
 ## nato.py
 A script used to translate a string of letters into a string of NATO alphabet terms. 
